@@ -50,6 +50,9 @@ namespace DatingApp.API.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login(UserForLoginDto userForLoginDto)
         {
+            //Escepcion de prueba
+            //throw new Exception("Computer say that no!");
+
             //Creamos un usuario y validar si existe, pasando el Username a minusculas como se guardo en BD
             var userFromRepo = await _repo.Login(userForLoginDto.Username.ToLower(), userForLoginDto.Password);
 
