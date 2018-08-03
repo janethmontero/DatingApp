@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { JwtHelperService} from '@auth0/angular-jwt';
+import { environment } from '../../environments/environment.prod';
 
 // esta instruccion se crea porque un servicio no es un componenete y no puede hacer inyeccion de datos por si solo, 
 // necesita especificarse que proveera de datos a una ruta, en este caso a la raiz (app.modules) 
@@ -11,7 +12,7 @@ import { JwtHelperService} from '@auth0/angular-jwt';
 export class AuthService {
 
   // especificamos la url predeterminada de nuestra api que va consultar este servicio
-  baseUrl = 'http://localhost:5000/api/auth/';
+  baseUrl = environment.apiUrl + 'auth/'; //'http://localhost:5000/api/auth/';
   jwtHelper = new JwtHelperService();
   decodedToken: any;
 
