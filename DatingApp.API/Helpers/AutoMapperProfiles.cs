@@ -33,6 +33,7 @@ namespace DatingApp.API.Helpers
             // Creacion de mapeado para el detalle de las fotos.
             // Se usa en UserForDetailedDto
             CreateMap<Photo, PhotosForDetailedDto>();
+            CreateMap<UserForUpdateDto, User>();  
         }
     }
 }
