@@ -11,7 +11,7 @@ namespace DatingApp.API.Controllers
 {
     //POST https://localhost:5000/api/values
     //la clausula [Authorize] especifica que los metodos estaran protegidos a menos que el usuario este autorizado.
-    [Authorize]
+   // [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
